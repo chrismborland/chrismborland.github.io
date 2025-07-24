@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Borland | bor.land</title>
+  <meta name="description" content="Landing page for Chris Borland – Senior Computer Scientist at Adobe. Connect on LinkedIn and stay tuned for my tech blog & photo gallery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #111827;
+      --accent: #2563eb;
+      --text-light: #6b7280;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --accent: #3b82f6;
+        --text-light: #94a3b8;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    main {
+      text-align: center;
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.25em;
+    }
+    p.tagline {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 1.5em;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    a.btn {
+      padding: 0.75em 1.5em;
+      border-radius: 9999px;
+      text-decoration: none;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    a.btn:hover {
+      background: #1d4ed8;
+    }
+    a.disabled {
+      background: var(--text-light);
+      cursor: not-allowed;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Chris&nbsp;Borland</h1>
+    <p class="tagline">Senior Computer Scientist&nbsp;@&nbsp;Adobe</p>
+
+    <nav>
+      <a class="btn" href="https://www.linkedin.com/in/chrismborland/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn disabled" aria-disabled="true" tabindex="-1">Blog&nbsp;(coming&nbsp;soon)</a>
+      <a class="btn disabled" aria-disabled="true" tabindex="-1">Gallery&nbsp;(coming&nbsp;soon)</a>
+    </nav>
+
+    <footer>
+      © <span id="year"></span> Chris Borland • Made with ♥
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
